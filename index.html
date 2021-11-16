@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap cdn -->    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- custom css -->
+    <link rel="stylesheet" type="text/css" href="./src/main.css">
+
+        <!--manifest.json-->
+        <link rel="manifest" href="./manifest.json">
+
+        <!-- ios support -->
+        <!--支援ios主畫面圖示-->
+        <link rel="apple-touch-icon" href="./icons/icon-96x96.png">
+        <!--改變status bar顏色-->
+        <meta name="apple-mobile-web-app-status-bar" content="#998811">
+</head>
+<body>
+    <div class="container">
+        <button class="btn btn-success">Scan</button>
+        <button class="btn btn-info">Connect</button>
+        <button class="btn btn-danger">Disconnect</button>
+        <button class="btn btn-warning">Pause/Run</button>
+        <button class="btn btn-secondary">Filter_ON/OFF</button>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div id="package-header" class="card-header">
+                Package
+            </div>
+            <div id="package-body" class="card-body">
+                N/A
+            </div>
+        </div>
+    </div>
+
+    <!-- register sw.js -->
+    <script>
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js')
+                .then(reg => console.log('service worker registered', reg))
+                .catch(err => console.log('service worker not registered', err));
+    }
+    </script>
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <!-- bootstrap cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <!-- custom js -->
+    <script type="text/javascript" src="./src/main.js"></script>
+    
+</body>
+</html>

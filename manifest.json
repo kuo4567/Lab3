@@ -1,0 +1,32 @@
+{
+    "short_name": "myBLE",
+    "name": "myBLE" ,
+    "start_url": "./index.html?source=pwa",
+    "background_color": "#7700EE",
+    "display": "standalone",
+    "theme_color": "#7700EE",
+    "icons": [
+        {
+            "src": "./icons/icon-72x72.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "./icons/icon-96x96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src":"./icons/icon-128x128.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "./icons/icon-144x144.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        }
+    ]
+}
+    
+    
